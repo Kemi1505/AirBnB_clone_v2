@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-"""starts the application"""
+"""
+starts the application
+"""
 
 from flask import Flask
 app = Flask(__name__)
+
 
 @app.route('/', strict_slashes=False)
 def index():
     """displays phrase"""
     return 'Hello HBNB!'
+
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
