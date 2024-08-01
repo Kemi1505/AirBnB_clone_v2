@@ -1,14 +1,37 @@
 <!DOCTYPE html>
+<!-- 
+Module: HBNB States Page
+Description: This module generates a web page displaying a list of states.
+Each state is displayed as a list item showing the state's ID and name.
+-->
+
 <html lang="en">
     <head>
+        <!-- 
+        Title: HBNB
+        Description: The title of the web page.
+        -->
         <title>HBNB</title>
     </head>
     <body>
-	    <h1>States</h1>
-	    <ul>
-    		{% for state in states.values() | sort(attribute='name') %}
-			<li>{{ state.id }}: <b>{{ state.name }}<b></li>
-    		{% endfor %}
-    	    </ul>
+        <!-- 
+        Header: States
+        Description: This header indicates that the following list contains states.
+        -->
+        <h1>States</h1>
+        <ul>
+            <!-- 
+            Loop: States
+            Description: Iterates over a sorted list of states, generating a list item for each state.
+            Sorting Attribute: name
+            -->
+            {% for state in states.values() | sort(attribute='name') %}
+                <!-- 
+                List Item: State
+                Description: Displays the state ID and name in a list item.
+                -->
+                <li>{{ state.id }}: <b>{{ state.name }}</b></li>
+            {% endfor %}
+        </ul>
     </body>
-</html>                 
+</html>
